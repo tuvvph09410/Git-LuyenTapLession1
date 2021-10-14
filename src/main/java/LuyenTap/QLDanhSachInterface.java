@@ -5,8 +5,8 @@
  */
 package LuyenTap;
 
+import java.util.List;
 import java.util.ArrayList;
-
 
 /**
  *
@@ -18,12 +18,12 @@ public interface QLDanhSachInterface {
 
     public void update(int viTri, Nguoi n);
 
-    public void delete(int viTri, Nguoi n);
+    public void delete(int viTri);
 
     public Nguoi get(int viTri);
 
-    public ArrayList<Nguoi> getList();
+    public void setList(List<Nguoi> list);
 
-    public void setList(ArrayList<Nguoi> list);
+    public List<Nguoi> getList();
 
 }

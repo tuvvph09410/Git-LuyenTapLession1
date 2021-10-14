@@ -5,11 +5,13 @@
  */
 package LuyenTap;
 
+import java.io.Serializable;
+
 /**
  *
  * @author vuvantu
  */
-public class Nguoi {
+public class Nguoi implements Serializable{
 
     private String hoTen;
     private String gioiTinh;

@@ -5,20 +5,22 @@
  */
 package LuyenTap;
 
+import java.util.List;
 import java.util.ArrayList;
 
 /**
  *
  * @author vuvantu
  */
-public class QLDanhSach implements QLDanhSachInterface{
-    private ArrayList<Nguoi> arrayListNguoi;
+public class QLDanhSach implements QLDanhSachInterface {
+
+    private List<Nguoi> arrayListNguoi;
 
     public QLDanhSach() {
-        this.arrayListNguoi=new ArrayList<>();
+        this.arrayListNguoi = new ArrayList<>();
     }
 
-    public QLDanhSach(ArrayList<Nguoi> arrayListNguoi) {
+    public QLDanhSach(List<Nguoi> arrayListNguoi) {
         this.arrayListNguoi = arrayListNguoi;
     }
 
@@ -33,7 +35,7 @@ public class QLDanhSach implements QLDanhSachInterface{
     }
 
     @Override
-    public void delete(int viTri, Nguoi n) {
+    public void delete(int viTri) {
         this.arrayListNguoi.remove(viTri);
     }
 
@@ -43,16 +45,13 @@ public class QLDanhSach implements QLDanhSachInterface{
     }
 
     @Override
-    public ArrayList<Nguoi> getList() {
+    public List<Nguoi> getList() {
         return this.arrayListNguoi;
     }
-    
+
     @Override
-    public void setList(ArrayList<Nguoi> list) {
-       this.arrayListNguoi=list;
+    public void setList(List<Nguoi> list) {
+        this.arrayListNguoi = list;
     }
 
-    
-    
-    
 }

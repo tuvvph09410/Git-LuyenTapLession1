@@ -12,39 +12,31 @@ package LuyenTap;
 public class SinhVien extends Nguoi {
 
     private String maSV;
-    private int tienTrongVi;
+    
+    private Double napTien;
 
     public SinhVien() {
     }
 
-    public SinhVien(String hoTen, String gioiTinh, String queQuan, String diaChi,String maSV, int tienTrongVi) {
+    public SinhVien(String hoTen, String gioiTinh, String queQuan, String diaChi, String maSV, Double napTien) {
         super(hoTen, gioiTinh, queQuan, diaChi);
-           this.maSV = maSV;
-        this.tienTrongVi = tienTrongVi;
+        this.maSV = maSV;
+        this.napTien = napTien;
     }
-
 
     public String getMaSV() {
         return maSV;
     }
 
-    public void napTien(int napTien) {
-        this.tienTrongVi += napTien;
+    public void setMaSV(String maSV) {
+        this.maSV = maSV;
     }
 
-    public void trutien(int truTien) {
-        this.tienTrongVi -= truTien;
+    public void setNapTien(Double napTien) {
+        this.napTien = napTien;
     }
 
-    @Override
-    public String getThongTin() {
-        String getThongTin = super.getThongTin() + " - " + this.maSV + " - " + this.tienTrongVi;
-        return getThongTin;
+    public Double getNapTien() {
+        return napTien;
     }
-
-    public String getThongTin(String chuyenNghanh) {
-        String getThongTin = this.maSV + " - chuyên nghành - " + this.tienTrongVi;
-        return getThongTin;
-    }
-
 }
